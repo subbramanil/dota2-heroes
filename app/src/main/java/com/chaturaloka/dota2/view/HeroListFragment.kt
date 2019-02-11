@@ -1,7 +1,6 @@
 package com.chaturaloka.dota2.view
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -58,7 +57,6 @@ class HeroListFragment : Fragment() {
         // Update the list when the data changes
         listViewModel.getHeroObservable()?.observe(this,
             Observer<List<Hero>> { Heros ->
-                Log.d("HeroListFragment", "onChanged (line 45): $Heros")
                 if (Heros != null) {
                     binding.isLoading = false
                     heroAdapter.setHeroList(Heros)

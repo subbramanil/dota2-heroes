@@ -1,5 +1,6 @@
 package com.chaturaloka.dota2.view.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -28,8 +29,13 @@ class HeroAdapter : RecyclerView.Adapter<HeroAdapter.HeroViewHolder>() {
     inner class HeroViewHolder(private val itemBinding: HeroListItemBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
         fun bind(item: Hero) {
+            Log.d("HeroViewHolder", "bind (line 32): ${item.localized_name}")
             with(itemBinding) {
-                heroName.text = item.localized_name?.trim() ?: ""
+                if (item.localized_name != null) {
+                    heroName.text = item.localized_name
+                } else {
+                    heroName.text = "---"
+                }
             }
         }
     }

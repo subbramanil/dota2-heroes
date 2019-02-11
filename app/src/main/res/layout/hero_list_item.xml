@@ -8,7 +8,7 @@
             type="com.chaturaloka.dota2.service.model.Hero" />
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -19,12 +19,12 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/_8dp"
             android:layout_gravity="center"
-            android:gravity="start"
+            android:gravity="center"
             android:id="@+id/hero_name"
-            android:text="@{hero.localized_name.trim()}"
+            android:text="@{hero.localized_name}"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/_16sp" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </layout>

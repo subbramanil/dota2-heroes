@@ -15,6 +15,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/hero_list"
+            android:background="#FAFDA9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
