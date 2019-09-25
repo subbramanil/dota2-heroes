@@ -20,7 +20,7 @@ android:
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
-before_script:
+#before_script:
   # Prepare pre-accepted licenses to not be promted at installation
   # - mkdir -p "$ANDROID_HOME/licenses"
   #z- cp ./google-licenses/* "$ANDROID_HOME/licenses/"
